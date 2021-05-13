@@ -1,0 +1,19 @@
+extends layout
+block content
+	h1 Lista
+	table
+		tr
+			th Lp
+			th Nazwa
+			th Rok
+			th Edytuj
+			th Usuń
+		each guitar, index in guitarList
+			tr
+				td=index+1
+				td=guitar.name
+				td=guitar.year
+				td
+					a(href="/edit/"+guitar.id) edytuj
+				td
+					a(href="/delete/"+guitar.id) usuń

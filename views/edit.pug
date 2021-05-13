@@ -1,0 +1,15 @@
+extends layout
+block content
+	h1 Edycja 
+	form(method="post" action="/edit/"+id)
+		label Nazwa
+		br
+		input(type="text" name="name" value=name)
+		br
+		label Rok
+		br
+		input(type="number" name="year" value=year)
+		br
+		input(type="submit" value="Zmień")
+		if message!=''
+			p #{message}
